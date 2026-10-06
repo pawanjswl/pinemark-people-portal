@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Directory</title>
+</head>
+<body>
+  <h1>Directory</h1>
+  <form method="get" th:action="@{/directory}">
+    <input type="text" name="q" th:value="${query}" maxlength="64">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    <!-- th:text escapes. th:utext would not, and is not used anywhere in this app. -->
+    <li th:each="e : ${results}">
+      <span th:text="${e.displayName}">name</span>
+      <span th:text="${e.department}">department</span>
+    </li>
+  </ul>
+  <form method="post" th:action="@{/logout}"><button type="submit">Sign out</button></form>
+</body>
+</html>

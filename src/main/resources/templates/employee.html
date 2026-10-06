@@ -1,0 +1,12 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Employee record</title>
+</head>
+<body>
+  <h1 th:text="${employee.displayName}">name</h1>
+  <p th:text="${employee.department}">department</p>
+  <p th:text="${employee.workEmail}">email</p>
+</body>
+</html>

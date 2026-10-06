@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Pinemark People Portal</title>
+</head>
+<body>
+  <h1>Pinemark People Portal</h1>
+  <form method="post" th:action="@{/login}">
+    <label>Username <input type="text" name="username" autocomplete="username"></label>
+    <label>Password <input type="password" name="password" autocomplete="current-password"></label>
+    <button type="submit">Sign in</button>
+  </form>
+</body>
+</html>
